@@ -1,0 +1,30 @@
+<style>
+    nav ul{
+        margin: 0;
+        padding: 0;
+        background-color: rgb(43, 43, 43);
+    }
+    nav ul li{
+        display: inline-block;
+    }
+    nav ul li a{
+        text-decoration: none;
+        font-size: 25px;
+        padding: 0 20px;
+        color: white;
+    }
+    nav ul li:hover{
+        background-color: rgb(74, 74, 74);
+    }
+</style>
+{% block content %}
+
+<nav>
+<ul id="header">
+    <li><a href="{% url 'home' %}">Home</a></li>
+    <li><a href="#">New board</a></li>
+    <li><a href="{% url 'create' %}">New Todo</a></li>
+</ul>
+</nav>
+
+{% endblock %}

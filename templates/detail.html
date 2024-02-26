@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block 'content' %}
+<h2 style="display: inline;">{{ todo.title }}</h2> <small>{{ todo.created }}</small><br>
+
+<figure>
+<img src="{{ todo.image.url }}" alt="{{ todo.title }}" width="300px">
+    <figcaption>
+            Starred : {{ todo.starred }} <br>
+            Degree_of_Importance : {{ todo.Degree_of_Importance }} <br>
+            Started : {{ todo.started }} <br>
+            Board : {{ todo.board }} <br>
+    </figcaption>
+</figure>
+
+<p>Description: {{ todo.description }}</p>
+<a href="{% url 'delete' todo.id %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'update' todo.id %}" class="btn btn-info">Update</a>
+
+
+{% endblock %}
